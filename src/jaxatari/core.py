@@ -73,7 +73,9 @@ GAME_MODULES = {
     "videopinball": "jaxatari.games.jax_videopinball",
     "wordzapper": "jaxatari.games.jax_wordzapper",
     # Add new games here
-    "lostluggage": "jaxatari.games.jax_lost_luggage"
+    "lostluggage": "jaxatari.games.jax_lostluggage",
+    "lostluggage2": "jaxatari.games.jax_lostluggage2",
+    "ponk": "jaxatari.games.ponk"
 }
 
 # Mod modules registry: for each game, provide the Controller class path

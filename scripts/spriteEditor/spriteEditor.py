@@ -51,6 +51,8 @@ class NPYImageEditor:
         self.root = master
         self.root.title("NPY Image Editor")
 
+        self.root.protocol("WM_DELETE_WINDOW", self.on_close)
+
         self.current_mouse_position = tk.StringVar()
         self.current_mouse_position.set("x=--, y=--")
 
@@ -137,6 +139,11 @@ class NPYImageEditor:
         self.root.bind("<Delete>", self.delete_selected)
         self.root.bind("<Key>", self.on_key_press)
         self.root.bind("<KeyRelease>", self.on_key_release)
+
+    def on_close(self):
+        plt.close('all')
+        self.root.quit()
+        self.root.destroy()
 
     def on_key_press(self, event):
         if event.keysym in ('Control_L', 'Control_R', 'Control'):
